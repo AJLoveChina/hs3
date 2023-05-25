@@ -7,7 +7,7 @@
     "serve-index": "^1.9.1"
   },
   "name": "hs3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "bin": {
     "hs3": "bin/hs3"
