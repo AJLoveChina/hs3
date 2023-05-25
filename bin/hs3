@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const pm2 = require('pm2');
+const path = require("path");
+const fs = require("fs-extra");
+let config = fs.readJsonSync("./hs3.config.json", {throws: false})
+
+if (!config) {
+    config = {};
+}
+
+pm2.connect(function (err) {
+    if (err) {
+        console.error(err)
+        process.exit(2)
+    }
+
+    const nameSuffixFromDirname = path.basename(process.cwd()).replace(/[^a-zA-Z0-9]/g, "");
+    pm2.start({
+        script: path.resolve(__dirname, "static-server.js"),
+        name: config.taskName ?? `static-server-${nameSuffixFromDirname}`
+    }, function (err, apps) {
+        if (err) {
+            console.error(err)
+            return pm2.disconnect()
+        }
+
+        console.log("running background success");
+        pm2.disconnect();
+    })
+});
