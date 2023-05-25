@@ -1,16 +1,20 @@
 {
-  "dependencies": {
+  "name": "hs3",
+  "version": "1.0.3",
+  "main": "bin/hs3",
+  "bin": {
+    "hs3": "bin/hs3"
+  },
+   "repository": {
+    "type": "git",
+    "url": "git@github.com:AJLoveChina/hs3.git"
+  },
+   "dependencies": {
     "express": "^4.18.2",
     "expressjs": "^1.0.1",
     "fs-extra": "^11.1.1",
     "pm2": "^5.3.0",
     "serve-index": "^1.9.1"
-  },
-  "name": "hs3",
-  "version": "1.0.2",
-  "main": "index.js",
-  "bin": {
-    "hs3": "bin/hs3"
   },
   "scripts": {
     "install-local-to-global": "npm link"
