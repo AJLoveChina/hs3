@@ -62,3 +62,4 @@ pm2 save
 
 ### Related link
 - https://github.com/AJLoveChina/hs2 - 💪a command-line http server with auto-generated ssl cert (支持自动生成ssl证书的http-server, 兼容所有功能)
+- https://zhuanlan.zhihu.com/p/632510834 - hs3 - 3秒之内创建一个可以后台运行且开机自启动的http-server(开发测试人员必备工具)
