@@ -1,6 +1,6 @@
 {
   "name": "hs3",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "bin/hs3",
   "bin": {
     "hs3": "bin/hs3"
